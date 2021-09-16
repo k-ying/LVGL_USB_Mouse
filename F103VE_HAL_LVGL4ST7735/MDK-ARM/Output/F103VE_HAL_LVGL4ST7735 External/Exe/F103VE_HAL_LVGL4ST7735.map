@@ -1,0 +1,891 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000131
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x0001bab8, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x0001b9e0])
+
+    Execution Region ER_RO (Base: 0x08000000, Size: 0x0001b988, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x00000130   Data   RO            3    RESET               startup_stm32f103xe.o
+    0x08000130   0x00000000   Code   RO        17008  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x00000004   Code   RO        17035    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x00000004   Code   RO        17038    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x00000000   Code   RO        17040    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x00000000   Code   RO        17042    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x00000008   Code   RO        17043    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x00000000   Code   RO        17045    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x00000000   Code   RO        17047    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x00000004   Code   RO        17036    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000144   0x00000024   Code   RO            4    .text               startup_stm32f103xe.o
+    0x08000168   0x00000024   Code   RO        17017    .text               mc_w.l(memseta.o)
+    0x0800018c   0x0000000e   Code   RO        17023    .text               mc_w.l(strlen.o)
+    0x0800019a   0x0000001c   Code   RO        17025    .text               mc_w.l(strcmp.o)
+    0x080001b6   0x0000001a   Code   RO        17027    .text               mc_w.l(memcmp.o)
+    0x080001d0   0x00000012   Code   RO        17029    .text               mc_w.l(strcpy.o)
+    0x080001e2   0x0000001a   Code   RO        17033    .text               mc_w.l(atoi.o)
+    0x080001fc   0x00000070   Code   RO        17058    .text               mc_w.l(strtol.o)
+    0x0800026c   0x00000024   Code   RO        17060    .text               mc_w.l(init.o)
+    0x08000290   0x00000008   Code   RO        17062    .text               mc_w.l(ctype_o.o)
+    0x08000298   0x0000009e   Code   RO        17090    .text               mc_w.l(_strtoul.o)
+    0x08000336   0x0000001c   Code   RO        17092    .text               mc_w.l(_chval.o)
+    0x08000352   0x00000056   Code   RO        17102    .text               mc_w.l(__dczerorl2.o)
+    0x080003a8   0x00000002   Code   RO          644    i.BusFault_Handler  stm32f1xx_it.o
+    0x080003aa   0x00000002   PAD
+    0x080003ac   0x0000000c   Code   RO          645    i.DMA1_Channel5_IRQHandler  stm32f1xx_it.o
+    0x080003b8   0x0000002a   Code   RO         1498    i.DMA_SetConfig     stm32f1xx_hal_dma.o
+    0x080003e2   0x00000002   Code   RO          646    i.DebugMon_Handler  stm32f1xx_it.o
+    0x080003e4   0x00000002   Code   RO            9    i.Error_Handler     main.o
+    0x080003e6   0x00000046   Code   RO         1499    i.HAL_DMA_Abort     stm32f1xx_hal_dma.o
+    0x0800042c   0x00000130   Code   RO         1500    i.HAL_DMA_Abort_IT  stm32f1xx_hal_dma.o
+    0x0800055c   0x00000248   Code   RO         1504    i.HAL_DMA_IRQHandler  stm32f1xx_hal_dma.o
+    0x080007a4   0x0000007c   Code   RO         1505    i.HAL_DMA_Init      stm32f1xx_hal_dma.o
+    0x08000820   0x00000070   Code   RO         1509    i.HAL_DMA_Start_IT  stm32f1xx_hal_dma.o
+    0x08000890   0x00000024   Code   RO         1127    i.HAL_Delay         stm32f1xx_hal.o
+    0x080008b4   0x000001f8   Code   RO         1435    i.HAL_GPIO_Init     stm32f1xx_hal_gpio.o
+    0x08000aac   0x0000000a   Code   RO         1437    i.HAL_GPIO_ReadPin  stm32f1xx_hal_gpio.o
+    0x08000ab6   0x0000000a   Code   RO         1439    i.HAL_GPIO_WritePin  stm32f1xx_hal_gpio.o
+    0x08000ac0   0x0000000c   Code   RO         1131    i.HAL_GetTick       stm32f1xx_hal.o
+    0x08000acc   0x00000010   Code   RO         1137    i.HAL_IncTick       stm32f1xx_hal.o
+    0x08000adc   0x00000024   Code   RO         1138    i.HAL_Init          stm32f1xx_hal.o
+    0x08000b00   0x00000040   Code   RO         1139    i.HAL_InitTick      stm32f1xx_hal.o
+    0x08000b40   0x00000040   Code   RO          738    i.HAL_MspInit       stm32f1xx_hal_msp.o
+    0x08000b80   0x0000001a   Code   RO         1595    i.HAL_NVIC_EnableIRQ  stm32f1xx_hal_cortex.o
+    0x08000b9a   0x00000002   PAD
+    0x08000b9c   0x00000040   Code   RO         1601    i.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x08000bdc   0x00000024   Code   RO         1602    i.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
+    0x08000c00   0x0000012c   Code   RO         1295    i.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
+    0x08000d2c   0x00000020   Code   RO         1302    i.HAL_RCC_GetPCLK1Freq  stm32f1xx_hal_rcc.o
+    0x08000d4c   0x00000020   Code   RO         1303    i.HAL_RCC_GetPCLK2Freq  stm32f1xx_hal_rcc.o
+    0x08000d6c   0x0000006c   Code   RO         1304    i.HAL_RCC_GetSysClockFreq  stm32f1xx_hal_rcc.o
+    0x08000dd8   0x00000320   Code   RO         1307    i.HAL_RCC_OscConfig  stm32f1xx_hal_rcc.o
+    0x080010f8   0x000000b2   Code   RO          809    i.HAL_SPI_Init      stm32f1xx_hal_spi.o
+    0x080011aa   0x00000002   PAD
+    0x080011ac   0x0000005c   Code   RO          507    i.HAL_SPI_MspInit   spi.o
+    0x08001208   0x00000166   Code   RO          817    i.HAL_SPI_Transmit  stm32f1xx_hal_spi.o
+    0x0800136e   0x00000028   Code   RO         1606    i.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
+    0x08001396   0x00000002   Code   RO         2801    i.HAL_TIMEx_BreakCallback  stm32f1xx_hal_tim_ex.o
+    0x08001398   0x00000002   Code   RO         2802    i.HAL_TIMEx_CommutCallback  stm32f1xx_hal_tim_ex.o
+    0x0800139a   0x00000002   PAD
+    0x0800139c   0x0000007c   Code   RO         2820    i.HAL_TIMEx_MasterConfigSynchronization  stm32f1xx_hal_tim_ex.o
+    0x08001418   0x0000005a   Code   RO         2097    i.HAL_TIM_Base_Init  stm32f1xx_hal_tim.o
+    0x08001472   0x00000002   PAD
+    0x08001474   0x00000038   Code   RO          549    i.HAL_TIM_Base_MspInit  tim.o
+    0x080014ac   0x0000006c   Code   RO         2102    i.HAL_TIM_Base_Start_IT  stm32f1xx_hal_tim.o
+    0x08001518   0x000000d6   Code   RO         2106    i.HAL_TIM_ConfigClockSource  stm32f1xx_hal_tim.o
+    0x080015ee   0x00000002   Code   RO         2131    i.HAL_TIM_IC_CaptureCallback  stm32f1xx_hal_tim.o
+    0x080015f0   0x00000166   Code   RO         2145    i.HAL_TIM_IRQHandler  stm32f1xx_hal_tim.o
+    0x08001756   0x00000002   Code   RO         2148    i.HAL_TIM_OC_DelayElapsedCallback  stm32f1xx_hal_tim.o
+    0x08001758   0x00000002   Code   RO         2175    i.HAL_TIM_PWM_PulseFinishedCallback  stm32f1xx_hal_tim.o
+    0x0800175a   0x00000002   PAD
+    0x0800175c   0x00000010   Code   RO          550    i.HAL_TIM_PeriodElapsedCallback  tim.o
+    0x0800176c   0x00000002   Code   RO         2188    i.HAL_TIM_TriggerCallback  stm32f1xx_hal_tim.o
+    0x0800176e   0x00000058   Code   RO         3087    i.HAL_UART_DMAStop  stm32f1xx_hal_uart.o
+    0x080017c6   0x00000002   Code   RO         3089    i.HAL_UART_ErrorCallback  stm32f1xx_hal_uart.o
+    0x080017c8   0x0000015c   Code   RO         3092    i.HAL_UART_IRQHandler  stm32f1xx_hal_uart.o
+    0x08001924   0x00000062   Code   RO         3093    i.HAL_UART_Init     stm32f1xx_hal_uart.o
+    0x08001986   0x00000002   PAD
+    0x08001988   0x000000b0   Code   RO          597    i.HAL_UART_MspInit  usart.o
+    0x08001a38   0x00000098   Code   RO         3097    i.HAL_UART_Receive_DMA  stm32f1xx_hal_uart.o
+    0x08001ad0   0x00000002   Code   RO         3099    i.HAL_UART_RxCpltCallback  stm32f1xx_hal_uart.o
+    0x08001ad2   0x00000002   Code   RO         3100    i.HAL_UART_RxHalfCpltCallback  stm32f1xx_hal_uart.o
+    0x08001ad4   0x00000002   Code   RO         3104    i.HAL_UART_TxCpltCallback  stm32f1xx_hal_uart.o
+    0x08001ad6   0x00000002   Code   RO          647    i.HardFault_Handler  stm32f1xx_it.o
+    0x08001ad8   0x0000002c   Code   RO          482    i.MX_DMA_Init       dma.o
+    0x08001b04   0x000000a4   Code   RO          458    i.MX_GPIO_Init      gpio.o
+    0x08001ba8   0x0000004c   Code   RO          508    i.MX_SPI1_Init      spi.o
+    0x08001bf4   0x00000064   Code   RO          551    i.MX_TIM2_Init      tim.o
+    0x08001c58   0x00000038   Code   RO          598    i.MX_USART1_UART_Init  usart.o
+    0x08001c90   0x00000002   Code   RO          648    i.MemManage_Handler  stm32f1xx_it.o
+    0x08001c92   0x00000002   Code   RO          649    i.NMI_Handler       stm32f1xx_it.o
+    0x08001c94   0x00000002   Code   RO          650    i.PendSV_Handler    stm32f1xx_it.o
+    0x08001c96   0x00000020   Code   RO          847    i.SPI_EndRxTxTransaction  stm32f1xx_hal_spi.o
+    0x08001cb6   0x00000002   PAD
+    0x08001cb8   0x000000b8   Code   RO          852    i.SPI_WaitFlagStateUntilTimeout  stm32f1xx_hal_spi.o
+    0x08001d70   0x0000003c   Code   RO         3446    i.ST7735_DrawPixel  st7735.o
+    0x08001dac   0x00000046   Code   RO         3447    i.ST7735_ExecuteCommandList  st7735.o
+    0x08001df2   0x00000002   PAD
+    0x08001df4   0x00000048   Code   RO         3450    i.ST7735_Init       st7735.o
+    0x08001e3c   0x00000010   Code   RO         3452    i.ST7735_Select     st7735.o
+    0x08001e4c   0x00000042   Code   RO         3453    i.ST7735_SetAddressWindow  st7735.o
+    0x08001e8e   0x00000002   PAD
+    0x08001e90   0x00000010   Code   RO         3454    i.ST7735_Unselect   st7735.o
+    0x08001ea0   0x00000024   Code   RO         3456    i.ST7735_WriteCommand  st7735.o
+    0x08001ec4   0x0000002c   Code   RO         3457    i.ST7735_WriteData  st7735.o
+    0x08001ef0   0x00000002   Code   RO          651    i.SVC_Handler       stm32f1xx_it.o
+    0x08001ef2   0x00000010   Code   RO          652    i.SysTick_Handler   stm32f1xx_it.o
+    0x08001f02   0x0000004e   Code   RO           10    i.SystemClock_Config  main.o
+    0x08001f50   0x00000002   Code   RO         3390    i.SystemInit        system_stm32f1xx.o
+    0x08001f52   0x00000002   PAD
+    0x08001f54   0x0000000c   Code   RO          653    i.TIM2_IRQHandler   stm32f1xx_it.o
+    0x08001f60   0x0000008c   Code   RO         2190    i.TIM_Base_SetConfig  stm32f1xx_hal_tim.o
+    0x08001fec   0x00000014   Code   RO         2201    i.TIM_ETR_SetConfig  stm32f1xx_hal_tim.o
+    0x08002000   0x00000010   Code   RO         2202    i.TIM_ITRx_SetConfig  stm32f1xx_hal_tim.o
+    0x08002010   0x00000022   Code   RO         2208    i.TIM_TI1_ConfigInputStage  stm32f1xx_hal_tim.o
+    0x08002032   0x00000024   Code   RO         2210    i.TIM_TI2_ConfigInputStage  stm32f1xx_hal_tim.o
+    0x08002056   0x00000010   Code   RO         3106    i.UART_DMAAbortOnError  stm32f1xx_hal_uart.o
+    0x08002066   0x0000004a   Code   RO         3107    i.UART_DMAError     stm32f1xx_hal_uart.o
+    0x080020b0   0x0000003c   Code   RO         3108    i.UART_DMAReceiveCplt  stm32f1xx_hal_uart.o
+    0x080020ec   0x0000000a   Code   RO         3110    i.UART_DMARxHalfCplt  stm32f1xx_hal_uart.o
+    0x080020f6   0x0000001c   Code   RO         3116    i.UART_EndRxTransfer  stm32f1xx_hal_uart.o
+    0x08002112   0x00000012   Code   RO         3117    i.UART_EndTxTransfer  stm32f1xx_hal_uart.o
+    0x08002124   0x0000008c   Code   RO         3118    i.UART_Receive_IT   stm32f1xx_hal_uart.o
+    0x080021b0   0x000000b8   Code   RO         3119    i.UART_SetConfig    stm32f1xx_hal_uart.o
+    0x08002268   0x00000018   Code   RO          654    i.USART1_IRQHandler  stm32f1xx_it.o
+    0x08002280   0x00000080   Code   RO           11    i.USAR_UART_IDLECallback  main.o
+    0x08002300   0x0000002c   Code   RO          599    i.USER_UART_IRQHandler  usart.o
+    0x0800232c   0x00000002   Code   RO          655    i.UsageFault_Handler  stm32f1xx_it.o
+    0x0800232e   0x00000020   Code   RO         1608    i.__NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x0800234e   0x00000002   PAD
+    0x08002350   0x00000008   Code   RO        17051    i.__aeabi_errno_addr  mc_w.l(errno.o)
+    0x08002358   0x0000000e   Code   RO        17096    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08002366   0x00000002   Code   RO        17097    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08002368   0x0000000e   Code   RO        17098    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08002376   0x00000002   PAD
+    0x08002378   0x00000030   Code   RO         8249    i._lv_anim_core_init  lv_anim.o
+    0x080023a8   0x000001c8   Code   RO         8426    i._lv_area_align    lv_area.o
+    0x08002570   0x00000050   Code   RO         8427    i._lv_area_intersect  lv_area.o
+    0x080025c0   0x000000a8   Code   RO         8428    i._lv_area_is_in    lv_area.o
+    0x08002668   0x00000038   Code   RO         8429    i._lv_area_is_on    lv_area.o
+    0x080026a0   0x00000126   Code   RO         8430    i._lv_area_is_point_on  lv_area.o
+    0x080027c6   0x00000044   Code   RO         8431    i._lv_area_join     lv_area.o
+    0x0800280a   0x000000ee   Code   RO         6049    i._lv_blend_fill    lv_draw_blend.o
+    0x080028f8   0x000000f8   Code   RO         6050    i._lv_blend_map     lv_draw_blend.o
+    0x080029f0   0x00000024   Code   RO         7826    i._lv_disp_pop_from_inv_buf  lv_hal_disp.o
+    0x08002a14   0x00000168   Code   RO         5543    i._lv_disp_refr_task  lv_refr.o
+    0x08002b7c   0x00000018   Code   RO         7517    i._lv_font_clean_up_fmt_txt  lv_font_fmt_txt.o
+    0x08002b94   0x0000000c   Code   RO         3777    i._lv_group_init    lv_group.o
+    0x08002ba0   0x00000240   Code   RO         6893    i._lv_img_buf_get_transformed_area  lv_img_buf.o
+    0x08002de0   0x00000154   Code   RO         6216    i._lv_img_buf_transform  lv_draw_img.o
+    0x08002f34   0x00000284   Code   RO         6894    i._lv_img_buf_transform_anti_alias  lv_img_buf.o
+    0x080031b8   0x000000f6   Code   RO         6895    i._lv_img_buf_transform_init  lv_img_buf.o
+    0x080032ae   0x00000002   PAD
+    0x080032b0   0x00000100   Code   RO         6994    i._lv_img_cache_open  lv_img_cache.o
+    0x080033b0   0x0000005c   Code   RO         7050    i._lv_img_decoder_init  lv_img_decoder.o
+    0x0800340c   0x00000008   Code   RO         4026    i._lv_indev_init    lv_indev.o
+    0x08003414   0x00000048   Code   RO         8090    i._lv_indev_read    lv_hal_indev.o
+    0x0800345c   0x000000a4   Code   RO         4027    i._lv_indev_read_task  lv_indev.o
+    0x08003500   0x000000d0   Code   RO         5544    i._lv_inv_area      lv_refr.o
+    0x080035d0   0x00000068   Code   RO         8696    i._lv_ll_chg_list   lv_ll.o
+    0x08003638   0x0000000a   Code   RO         8698    i._lv_ll_get_head   lv_ll.o
+    0x08003642   0x0000001c   Code   RO         8699    i._lv_ll_get_len    lv_ll.o
+    0x0800365e   0x0000000c   Code   RO         8700    i._lv_ll_get_next   lv_ll.o
+    0x0800366a   0x0000000a   Code   RO         8701    i._lv_ll_get_prev   lv_ll.o
+    0x08003674   0x0000000a   Code   RO         8702    i._lv_ll_get_tail   lv_ll.o
+    0x0800367e   0x00000010   Code   RO         8703    i._lv_ll_init       lv_ll.o
+    0x0800368e   0x0000003c   Code   RO         8704    i._lv_ll_ins_head   lv_ll.o
+    0x080036ca   0x00000066   Code   RO         8705    i._lv_ll_ins_prev   lv_ll.o
+    0x08003730   0x0000003c   Code   RO         8706    i._lv_ll_ins_tail   lv_ll.o
+    0x0800376c   0x00000012   Code   RO         8707    i._lv_ll_is_empty   lv_ll.o
+    0x0800377e   0x00000060   Code   RO         8708    i._lv_ll_move_before  lv_ll.o
+    0x080037de   0x00000076   Code   RO         8709    i._lv_ll_remove     lv_ll.o
+    0x08003854   0x00000024   Code   RO         8801    i._lv_map           lv_math.o
+    0x08003878   0x00000044   Code   RO         8849    i._lv_mem_buf_free_all  lv_mem.o
+    0x080038bc   0x0000010c   Code   RO         8850    i._lv_mem_buf_get   lv_mem.o
+    0x080039c8   0x00000040   Code   RO         8851    i._lv_mem_buf_release  lv_mem.o
+    0x08003a08   0x0000001c   Code   RO         8853    i._lv_mem_get_size  lv_mem.o
+    0x08003a24   0x00000020   Code   RO         8854    i._lv_mem_init      lv_mem.o
+    0x08003a44   0x00000128   Code   RO         8855    i._lv_memcpy        lv_mem.o
+    0x08003b6c   0x00000018   Code   RO         4240    i._lv_memcpy_small  lv_obj.o
+    0x08003b84   0x00000018   Code   RO         5689    i._lv_memcpy_small  lv_style.o
+    0x08003b9c   0x00000018   Code   RO         6217    i._lv_memcpy_small  lv_draw_img.o
+    0x08003bb4   0x00000018   Code   RO         6896    i._lv_memcpy_small  lv_img_buf.o
+    0x08003bcc   0x00000064   Code   RO         8856    i._lv_memset        lv_mem.o
+    0x08003c30   0x0000005c   Code   RO         8857    i._lv_memset_00     lv_mem.o
+    0x08003c8c   0x00000060   Code   RO         8858    i._lv_memset_ff     lv_mem.o
+    0x08003cec   0x00000042   Code   RO         4241    i._lv_obj_disable_style_caching  lv_obj.o
+    0x08003d2e   0x00000002   PAD
+    0x08003d30   0x00000084   Code   RO         4242    i._lv_obj_get_style_color  lv_obj.o
+    0x08003db4   0x000001a6   Code   RO         4243    i._lv_obj_get_style_int  lv_obj.o
+    0x08003f5a   0x000000c0   Code   RO         4244    i._lv_obj_get_style_opa  lv_obj.o
+    0x0800401a   0x00000002   PAD
+    0x0800401c   0x000000c4   Code   RO         4245    i._lv_obj_get_style_ptr  lv_obj.o
+    0x080040e0   0x0000000c   Code   RO         5545    i._lv_refr_get_disp_refreshing  lv_refr.o
+    0x080040ec   0x00000002   Code   RO         5546    i._lv_refr_init     lv_refr.o
+    0x080040ee   0x00000022   Code   RO         8803    i._lv_sqrt          lv_math.o
+    0x08004110   0x00000030   Code   RO         5690    i._lv_style_get_color  lv_style.o
+    0x08004140   0x00000030   Code   RO         5691    i._lv_style_get_int  lv_style.o
+    0x08004170   0x0000002c   Code   RO         5692    i._lv_style_get_mem_size  lv_style.o
+    0x0800419c   0x00000030   Code   RO         5693    i._lv_style_get_opa  lv_style.o
+    0x080041cc   0x00000030   Code   RO         5694    i._lv_style_get_ptr  lv_style.o
+    0x080041fc   0x00000090   Code   RO         5695    i._lv_style_list_add_style  lv_style.o
+    0x0800428c   0x00000070   Code   RO         5696    i._lv_style_list_add_trans_style  lv_style.o
+    0x080042fc   0x00000078   Code   RO         5697    i._lv_style_list_get_color  lv_style.o
+    0x08004374   0x00000078   Code   RO         5698    i._lv_style_list_get_int  lv_style.o
+    0x080043ec   0x00000078   Code   RO         5699    i._lv_style_list_get_opa  lv_style.o
+    0x08004464   0x0000006e   Code   RO         5700    i._lv_style_list_get_ptr  lv_style.o
+    0x080044d2   0x00000010   Code   RO         5701    i._lv_style_list_get_transition_style  lv_style.o
+    0x080044e2   0x00000002   PAD
+    0x080044e4   0x000000b0   Code   RO         5702    i._lv_style_list_remove_style  lv_style.o
+    0x08004594   0x00000054   Code   RO         5703    i._lv_style_list_reset  lv_style.o
+    0x080045e8   0x00000084   Code   RO         5708    i._lv_style_set_color  lv_style.o
+    0x0800466c   0x00000084   Code   RO         5709    i._lv_style_set_int  lv_style.o
+    0x080046f0   0x00000084   Code   RO         5710    i._lv_style_set_opa  lv_style.o
+    0x08004774   0x00000084   Code   RO         5711    i._lv_style_set_ptr  lv_style.o
+    0x080047f8   0x0000001c   Code   RO         9025    i._lv_task_core_init  lv_task.o
+    0x08004814   0x00000054   Code   RO         8804    i._lv_trigo_sin     lv_math.o
+    0x08004868   0x000000d8   Code   RO         9138    i._lv_txt_get_next_line  lv_txt.o
+    0x08004940   0x000000b8   Code   RO         9139    i._lv_txt_get_size  lv_txt.o
+    0x080049f8   0x0000008c   Code   RO         9140    i._lv_txt_get_width  lv_txt.o
+    0x08004a84   0x00000036   Code   RO         9142    i._lv_txt_is_cmd    lv_txt.o
+    0x08004aba   0x00000002   PAD
+    0x08004abc   0x0000004c   Code   RO         9314    i._lv_utils_bsearch  lv_utils.o
+    0x08004b08   0x00000028   Code   RO         8250    i.anim_mark_list_change  lv_anim.o
+    0x08004b30   0x0000008c   Code   RO         8251    i.anim_ready_handler  lv_anim.o
+    0x08004bbc   0x000000b0   Code   RO         8252    i.anim_task         lv_anim.o
+    0x08004c6c   0x00000038   Code   RO         9335    i.apply_theme       lv_theme.o
+    0x08004ca4   0x0000012c   Code   RO         9718    i.arc_init          lv_theme_material.o
+    0x08004dd0   0x00000170   Code   RO         9719    i.bar_init          lv_theme_material.o
+    0x08004f40   0x00000d5e   Code   RO         9720    i.basic_init        lv_theme_material.o
+    0x08005c9e   0x00000056   Code   RO         7518    i.bits_write        lv_font_fmt_txt.o
+    0x08005cf4   0x00000048   Code   RO        16966    i.button_read       lv_port_indev.o
+    0x08005d3c   0x00000572   Code   RO         9721    i.calendar_init     lv_theme_material.o
+    0x080062ae   0x00000002   PAD
+    0x080062b0   0x000001cc   Code   RO         9722    i.chart_init        lv_theme_material.o
+    0x0800647c   0x00000288   Code   RO         9723    i.checkbox_init     lv_theme_material.o
+    0x08006704   0x00000128   Code   RO         9336    i.clear_styles      lv_theme.o
+    0x0800682c   0x00000074   Code   RO         6051    i.color_blend_true_color_additive  lv_draw_blend.o
+    0x080068a0   0x00000074   Code   RO         6052    i.color_blend_true_color_subtractive  lv_draw_blend.o
+    0x08006914   0x00000218   Code   RO         9724    i.cpicker_init      lv_theme_material.o
+    0x08006b2c   0x000000e0   Code   RO         9725    i.ddlist_init       lv_theme_material.o
+    0x08006c0c   0x000000e0   Code   RO         7519    i.decompress        lv_font_fmt_txt.o
+    0x08006cec   0x0000001c   Code   RO         7520    i.decompress_line   lv_font_fmt_txt.o
+    0x08006d08   0x00000040   Code   RO        16722    i.disp_flush        lv_port_disp.o
+    0x08006d48   0x0000046e   Code   RO         6722    i.draw_bg           lv_draw_rect.o
+    0x080071b6   0x00000002   PAD
+    0x080071b8   0x000002cc   Code   RO         6723    i.draw_border       lv_draw_rect.o
+    0x08007484   0x00000448   Code   RO         6724    i.draw_full_border  lv_draw_rect.o
+    0x080078cc   0x0000026c   Code   RO         6359    i.draw_letter_normal  lv_draw_label.o
+    0x08007b38   0x0000036c   Code   RO         6360    i.draw_letter_subpx  lv_draw_label.o
+    0x08007ea4   0x000001f8   Code   RO         6471    i.draw_line_hor     lv_draw_line.o
+    0x0800809c   0x000003ac   Code   RO         6472    i.draw_line_skew    lv_draw_line.o
+    0x08008448   0x000001ce   Code   RO         6473    i.draw_line_ver     lv_draw_line.o
+    0x08008616   0x000000ae   Code   RO         6725    i.draw_outline      lv_draw_rect.o
+    0x080086c4   0x00000260   Code   RO         6726    i.draw_pattern      lv_draw_rect.o
+    0x08008924   0x00000b96   Code   RO         6727    i.draw_shadow       lv_draw_rect.o
+    0x080094ba   0x000000d6   Code   RO         6728    i.draw_value_str    lv_draw_rect.o
+    0x08009590   0x00000024   Code   RO         8859    i.ent_get_next      lv_mem.o
+    0x080095b4   0x0000003e   Code   RO         8860    i.ent_trunc         lv_mem.o
+    0x080095f2   0x00000002   PAD
+    0x080095f4   0x00000134   Code   RO         6053    i.fill_blended      lv_draw_blend.o
+    0x08009728   0x00000396   Code   RO         6054    i.fill_normal       lv_draw_blend.o
+    0x08009abe   0x00000002   PAD
+    0x08009ac0   0x000000ca   Code   RO         6055    i.fill_set_px       lv_draw_blend.o
+    0x08009b8a   0x000000d2   Code   RO         3778    i.focus_next_core   lv_group.o
+    0x08009c5c   0x000003cc   Code   RO         9726    i.gauge_init        lv_theme_material.o
+    0x0800a028   0x00000064   Code   RO         5712    i.get_alloc_local_style  lv_style.o
+    0x0800a08c   0x0000005c   Code   RO         7521    i.get_bits          lv_font_fmt_txt.o
+    0x0800a0e8   0x0000001c   Code   RO         4028    i.get_dragged_obj   lv_indev.o
+    0x0800a104   0x00000114   Code   RO         7522    i.get_glyph_dsc_id  lv_font_fmt_txt.o
+    0x0800a218   0x00000090   Code   RO         7523    i.get_kern_value    lv_font_fmt_txt.o
+    0x0800a2a8   0x0000001c   Code   RO         5713    i.get_prop_size     lv_style.o
+    0x0800a2c4   0x00000066   Code   RO         5714    i.get_property_index  lv_style.o
+    0x0800a32a   0x00000014   Code   RO         5715    i.get_style_prop    lv_style.o
+    0x0800a33e   0x0000000a   Code   RO         5716    i.get_style_prop_attr  lv_style.o
+    0x0800a348   0x0000000a   Code   RO         5717    i.get_style_prop_id  lv_style.o
+    0x0800a352   0x0000004e   Code   RO        13777    i.get_txt_coords    lv_label.o
+    0x0800a3a0   0x000000b8   Code   RO         6729    i.grad_get          lv_draw_rect.o
+    0x0800a458   0x00000040   Code   RO         6361    i.hex_char_to_num   lv_draw_label.o
+    0x0800a498   0x00000072   Code   RO         4029    i.indev_button_proc  lv_indev.o
+    0x0800a50a   0x00000002   PAD
+    0x0800a50c   0x000000fc   Code   RO         4030    i.indev_click_focus  lv_indev.o
+    0x0800a608   0x000002a8   Code   RO         4031    i.indev_drag        lv_indev.o
+    0x0800a8b0   0x0000018c   Code   RO         4032    i.indev_drag_throw  lv_indev.o
+    0x0800aa3c   0x0000037c   Code   RO         4033    i.indev_encoder_proc  lv_indev.o
+    0x0800adb8   0x000000f4   Code   RO         4034    i.indev_gesture     lv_indev.o
+    0x0800aeac   0x00000224   Code   RO         4035    i.indev_keypad_proc  lv_indev.o
+    0x0800b0d0   0x00000090   Code   RO         4036    i.indev_pointer_proc  lv_indev.o
+    0x0800b160   0x000002a0   Code   RO         4037    i.indev_proc_press  lv_indev.o
+    0x0800b400   0x0000013c   Code   RO         4038    i.indev_proc_release  lv_indev.o
+    0x0800b53c   0x00000040   Code   RO         4039    i.indev_proc_reset_query_handler  lv_indev.o
+    0x0800b57c   0x00000018   Code   RO         4040    i.indev_reset_check  lv_indev.o
+    0x0800b594   0x0000005e   Code   RO         4252    i.invalidate_style_cache  lv_obj.o
+    0x0800b5f2   0x00000014   Code   RO         7524    i.kern_pair_16_compare  lv_font_fmt_txt.o
+    0x0800b606   0x00000014   Code   RO         7525    i.kern_pair_8_compare  lv_font_fmt_txt.o
+    0x0800b61a   0x00000002   PAD
+    0x0800b61c   0x00000188   Code   RO         9727    i.keyboard_init     lv_theme_material.o
+    0x0800b7a4   0x000000e4   Code   RO         9728    i.led_init          lv_theme_material.o
+    0x0800b888   0x00000158   Code   RO         6574    i.line_mask_flat    lv_draw_mask.o
+    0x0800b9e0   0x000001de   Code   RO         6575    i.line_mask_steep   lv_draw_mask.o
+    0x0800bbbe   0x00000002   PAD
+    0x0800bbc0   0x000001cc   Code   RO         9729    i.linemeter_init    lv_theme_material.o
+    0x0800bd8c   0x00000580   Code   RO         9730    i.list_init         lv_theme_material.o
+    0x0800c30c   0x00000054   Code   RO         8254    i.lv_anim_del       lv_anim.o
+    0x0800c360   0x0000002c   Code   RO         8256    i.lv_anim_get       lv_anim.o
+    0x0800c38c   0x00000040   Code   RO         8257    i.lv_anim_init      lv_anim.o
+    0x0800c3cc   0x00000026   Code   RO         8262    i.lv_anim_path_linear  lv_anim.o
+    0x0800c3f2   0x0000001a   Code   RO         8266    i.lv_anim_speed_to_time  lv_anim.o
+    0x0800c40c   0x00000090   Code   RO         8267    i.lv_anim_start     lv_anim.o
+    0x0800c49c   0x00000006   Code   RO         4253    i.lv_area_copy      lv_obj.o
+    0x0800c4a2   0x00000002   PAD
+    0x0800c4a4   0x00000012   Code   RO         5548    i.lv_area_copy      lv_refr.o
+    0x0800c4b6   0x00000002   PAD
+    0x0800c4b8   0x00000012   Code   RO         6576    i.lv_area_copy      lv_draw_mask.o
+    0x0800c4ca   0x00000002   PAD
+    0x0800c4cc   0x00000012   Code   RO         6730    i.lv_area_copy      lv_draw_rect.o
+    0x0800c4de   0x00000002   PAD
+    0x0800c4e0   0x00000012   Code   RO        12332    i.lv_area_copy      lv_cont.o
+    0x0800c4f2   0x0000000c   Code   RO         6731    i.lv_area_get_height  lv_draw_rect.o
+    0x0800c4fe   0x0000000c   Code   RO         8433    i.lv_area_get_height  lv_area.o
+    0x0800c50a   0x0000000c   Code   RO        13778    i.lv_area_get_height  lv_label.o
+    0x0800c516   0x0000001c   Code   RO         8434    i.lv_area_get_size  lv_area.o
+    0x0800c532   0x0000000c   Code   RO         6218    i.lv_area_get_width  lv_draw_img.o
+    0x0800c53e   0x0000000c   Code   RO         6362    i.lv_area_get_width  lv_draw_label.o
+    0x0800c54a   0x0000000c   Code   RO         6732    i.lv_area_get_width  lv_draw_rect.o
+    0x0800c556   0x0000000c   Code   RO         8435    i.lv_area_get_width  lv_area.o
+    0x0800c562   0x0000000c   Code   RO        13779    i.lv_area_get_width  lv_label.o
+    0x0800c56e   0x0000000e   Code   RO         8436    i.lv_area_set       lv_area.o
+    0x0800c57c   0x0000000a   Code   RO         8437    i.lv_area_set_height  lv_area.o
+    0x0800c586   0x00000002   PAD
+    0x0800c588   0x000000e4   Code   RO        11141    i.lv_btn_create     lv_btn.o
+    0x0800c66c   0x00000024   Code   RO        11142    i.lv_btn_design     lv_btn.o
+    0x0800c690   0x00000034   Code   RO        11143    i.lv_btn_get_checkable  lv_btn.o
+    0x0800c6c4   0x00000034   Code   RO        11145    i.lv_btn_set_checkable  lv_btn.o
+    0x0800c6f8   0x00000088   Code   RO        11146    i.lv_btn_set_state  lv_btn.o
+    0x0800c780   0x000000bc   Code   RO        11147    i.lv_btn_signal     lv_btn.o
+    0x0800c83c   0x00000016   Code   RO         8569    i.lv_color_darken   lv_color.o
+    0x0800c852   0x00000002   PAD
+    0x0800c854   0x0000004c   Code   RO         8570    i.lv_color_fill     lv_color.o
+    0x0800c8a0   0x0000002e   Code   RO         4254    i.lv_color_hex      lv_obj.o
+    0x0800c8ce   0x00000018   Code   RO         9731    i.lv_color_hex      lv_theme_material.o
+    0x0800c8e6   0x0000002e   Code   RO         9732    i.lv_color_hex3     lv_theme_material.o
+    0x0800c914   0x0000001c   Code   RO         8572    i.lv_color_lighten  lv_color.o
+    0x0800c930   0x00000030   Code   RO         9733    i.lv_color_make     lv_theme_material.o
+    0x0800c960   0x00000072   Code   RO         6056    i.lv_color_mix      lv_draw_blend.o
+    0x0800c9d2   0x00000072   Code   RO         6897    i.lv_color_mix      lv_img_buf.o
+    0x0800ca44   0x00000072   Code   RO         8574    i.lv_color_mix      lv_color.o
+    0x0800cab6   0x00000072   Code   RO         9734    i.lv_color_mix      lv_theme_material.o
+    0x0800cb28   0x000000fc   Code   RO        12333    i.lv_cont_create    lv_cont.o
+    0x0800cc24   0x00000034   Code   RO        12338    i.lv_cont_get_layout  lv_cont.o
+    0x0800cc58   0x000000c2   Code   RO        12339    i.lv_cont_layout_center  lv_cont.o
+    0x0800cd1a   0x00000002   PAD
+    0x0800cd1c   0x000000d4   Code   RO        12340    i.lv_cont_layout_col  lv_cont.o
+    0x0800cdf0   0x000000aa   Code   RO        12341    i.lv_cont_layout_grid  lv_cont.o
+    0x0800ce9a   0x00000002   PAD
+    0x0800ce9c   0x000002ac   Code   RO        12342    i.lv_cont_layout_pretty  lv_cont.o
+    0x0800d148   0x000000e6   Code   RO        12343    i.lv_cont_layout_row  lv_cont.o
+    0x0800d22e   0x00000002   PAD
+    0x0800d230   0x00000364   Code   RO        12344    i.lv_cont_refr_autofit  lv_cont.o
+    0x0800d594   0x00000086   Code   RO        12345    i.lv_cont_refr_layout  lv_cont.o
+    0x0800d61a   0x00000002   PAD
+    0x0800d61c   0x00000050   Code   RO        12347    i.lv_cont_set_layout  lv_cont.o
+    0x0800d66c   0x000000a8   Code   RO        12348    i.lv_cont_signal    lv_cont.o
+    0x0800d714   0x00000008   Code   RO         8626    i.lv_debug_check_null  lv_debug.o
+    0x0800d71c   0x00000064   Code   RO         8628    i.lv_debug_log_error  lv_debug.o
+    0x0800d780   0x0000001e   Code   RO         7827    i.lv_disp_buf_init  lv_hal_disp.o
+    0x0800d79e   0x00000002   PAD
+    0x0800d7a0   0x00000040   Code   RO         7828    i.lv_disp_drv_init  lv_hal_disp.o
+    0x0800d7e0   0x00000120   Code   RO         7829    i.lv_disp_drv_register  lv_hal_disp.o
+    0x0800d900   0x0000000c   Code   RO         7832    i.lv_disp_flush_ready  lv_hal_disp.o
+    0x0800d90c   0x00000004   Code   RO         7834    i.lv_disp_get_buf   lv_hal_disp.o
+    0x0800d910   0x0000000c   Code   RO         7835    i.lv_disp_get_default  lv_hal_disp.o
+    0x0800d91c   0x00000018   Code   RO         7836    i.lv_disp_get_dpi   lv_hal_disp.o
+    0x0800d934   0x0000002c   Code   RO         7837    i.lv_disp_get_hor_res  lv_hal_disp.o
+    0x0800d960   0x0000000a   Code   RO         7838    i.lv_disp_get_inv_buf_size  lv_hal_disp.o
+    0x0800d96a   0x00000010   Code   RO         3565    i.lv_disp_get_layer_sys  lv_disp.o
+    0x0800d97a   0x00000010   Code   RO         3566    i.lv_disp_get_layer_top  lv_disp.o
+    0x0800d98a   0x00000002   PAD
+    0x0800d98c   0x00000014   Code   RO         7839    i.lv_disp_get_next  lv_hal_disp.o
+    0x0800d9a0   0x00000010   Code   RO         3567    i.lv_disp_get_scr_act  lv_disp.o
+    0x0800d9b0   0x00000010   Code   RO         3568    i.lv_disp_get_scr_prev  lv_disp.o
+    0x0800d9c0   0x00000048   Code   RO         7841    i.lv_disp_get_size_category  lv_hal_disp.o
+    0x0800da08   0x0000002c   Code   RO         7842    i.lv_disp_get_ver_res  lv_hal_disp.o
+    0x0800da34   0x00000012   Code   RO         7843    i.lv_disp_is_double_buf  lv_hal_disp.o
+    0x0800da46   0x00000026   Code   RO         7844    i.lv_disp_is_true_double_buf  lv_hal_disp.o
+    0x0800da6c   0x00000034   Code   RO         6219    i.lv_draw_img       lv_draw_img.o
+    0x0800daa0   0x00000022   Code   RO         6220    i.lv_draw_img_dsc_init  lv_draw_img.o
+    0x0800dac2   0x00000002   PAD
+    0x0800dac4   0x00000524   Code   RO         6363    i.lv_draw_label     lv_draw_label.o
+    0x0800dfe8   0x00000048   Code   RO         6364    i.lv_draw_label_dsc_init  lv_draw_label.o
+    0x0800e030   0x000000be   Code   RO         6365    i.lv_draw_letter    lv_draw_label.o
+    0x0800e0ee   0x00000192   Code   RO         6474    i.lv_draw_line      lv_draw_line.o
+    0x0800e280   0x0000001e   Code   RO         6475    i.lv_draw_line_dsc_init  lv_draw_line.o
+    0x0800e29e   0x00000002   PAD
+    0x0800e2a0   0x00000560   Code   RO         6221    i.lv_draw_map       lv_draw_img.o
+    0x0800e800   0x00000034   Code   RO         6577    i.lv_draw_mask_add  lv_draw_mask.o
+    0x0800e834   0x00000044   Code   RO         6580    i.lv_draw_mask_apply  lv_draw_mask.o
+    0x0800e878   0x00000020   Code   RO         6583    i.lv_draw_mask_get_cnt  lv_draw_mask.o
+    0x0800e898   0x000000ac   Code   RO         6584    i.lv_draw_mask_line  lv_draw_mask.o
+    0x0800e944   0x00000104   Code   RO         6586    i.lv_draw_mask_line_points_init  lv_draw_mask.o
+    0x0800ea48   0x00000402   Code   RO         6589    i.lv_draw_mask_radius  lv_draw_mask.o
+    0x0800ee4a   0x00000002   PAD
+    0x0800ee4c   0x00000050   Code   RO         6590    i.lv_draw_mask_radius_init  lv_draw_mask.o
+    0x0800ee9c   0x00000030   Code   RO         6591    i.lv_draw_mask_remove_custom  lv_draw_mask.o
+    0x0800eecc   0x00000020   Code   RO         6592    i.lv_draw_mask_remove_id  lv_draw_mask.o
+    0x0800eeec   0x0000005c   Code   RO         6734    i.lv_draw_rect      lv_draw_rect.o
+    0x0800ef48   0x0000006c   Code   RO         6735    i.lv_draw_rect_dsc_init  lv_draw_rect.o
+    0x0800efb4   0x00000040   Code   RO         4259    i.lv_event_send     lv_obj.o
+    0x0800eff4   0x000000a0   Code   RO         4260    i.lv_event_send_func  lv_obj.o
+    0x0800f094   0x000000d0   Code   RO         7526    i.lv_font_get_bitmap_fmt_txt  lv_font_fmt_txt.o
+    0x0800f164   0x00000004   Code   RO         7195    i.lv_font_get_glyph_bitmap  lv_font.o
+    0x0800f168   0x0000000a   Code   RO         7196    i.lv_font_get_glyph_dsc  lv_font.o
+    0x0800f172   0x00000002   PAD
+    0x0800f174   0x00000098   Code   RO         7527    i.lv_font_get_glyph_dsc_fmt_txt  lv_font_fmt_txt.o
+    0x0800f20c   0x00000016   Code   RO         7197    i.lv_font_get_glyph_width  lv_font.o
+    0x0800f222   0x00000002   PAD
+    0x0800f224   0x00000078   Code   RO         3779    i.lv_group_add_obj  lv_group.o
+    0x0800f29c   0x00000010   Code   RO         3783    i.lv_group_focus_next  lv_group.o
+    0x0800f2ac   0x000000a2   Code   RO         3784    i.lv_group_focus_obj  lv_group.o
+    0x0800f34e   0x00000002   PAD
+    0x0800f350   0x00000010   Code   RO         3785    i.lv_group_focus_prev  lv_group.o
+    0x0800f360   0x0000000c   Code   RO         3787    i.lv_group_get_editing  lv_group.o
+    0x0800f36c   0x0000000e   Code   RO         3789    i.lv_group_get_focused  lv_group.o
+    0x0800f37a   0x0000002a   Code   RO         3791    i.lv_group_refocus  lv_group.o
+    0x0800f3a4   0x00000084   Code   RO         3793    i.lv_group_remove_obj  lv_group.o
+    0x0800f428   0x00000026   Code   RO         3794    i.lv_group_send_data  lv_group.o
+    0x0800f44e   0x00000044   Code   RO         3796    i.lv_group_set_editing  lv_group.o
+    0x0800f492   0x00000002   PAD
+    0x0800f494   0x000000d0   Code   RO         6901    i.lv_img_buf_get_px_alpha  lv_img_buf.o
+    0x0800f564   0x000000e0   Code   RO         6902    i.lv_img_buf_get_px_color  lv_img_buf.o
+    0x0800f644   0x00000058   Code   RO         6995    i.lv_img_cache_invalidate_src  lv_img_cache.o
+    0x0800f69c   0x00000034   Code   RO         6996    i.lv_img_cache_match  lv_img_cache.o
+    0x0800f6d0   0x00000068   Code   RO         6997    i.lv_img_cache_set_size  lv_img_cache.o
+    0x0800f738   0x00000034   Code   RO         6222    i.lv_img_cf_get_px_size  lv_draw_img.o
+    0x0800f76c   0x00000020   Code   RO         6223    i.lv_img_cf_has_alpha  lv_draw_img.o
+    0x0800f78c   0x0000001a   Code   RO         6224    i.lv_img_cf_is_chroma_keyed  lv_draw_img.o
+    0x0800f7a6   0x00000002   PAD
+    0x0800f7a8   0x00000144   Code   RO        13252    i.lv_img_create     lv_img.o
+    0x0800f8ec   0x00000026   Code   RO         7051    i.lv_img_decoder_built_in_close  lv_img_decoder.o
+    0x0800f912   0x0000005e   Code   RO         7052    i.lv_img_decoder_built_in_info  lv_img_decoder.o
+    0x0800f970   0x00000150   Code   RO         7053    i.lv_img_decoder_built_in_line_alpha  lv_img_decoder.o
+    0x0800fac0   0x00000114   Code   RO         7054    i.lv_img_decoder_built_in_line_indexed  lv_img_decoder.o
+    0x0800fbd4   0x00000148   Code   RO         7055    i.lv_img_decoder_built_in_open  lv_img_decoder.o
+    0x0800fd1c   0x00000060   Code   RO         7056    i.lv_img_decoder_built_in_read_line  lv_img_decoder.o
+    0x0800fd7c   0x00000024   Code   RO         7057    i.lv_img_decoder_close  lv_img_decoder.o
+    0x0800fda0   0x00000044   Code   RO         7058    i.lv_img_decoder_create  lv_img_decoder.o
+    0x0800fde4   0x00000040   Code   RO         7060    i.lv_img_decoder_get_info  lv_img_decoder.o
+    0x0800fe24   0x000000d8   Code   RO         7061    i.lv_img_decoder_open  lv_img_decoder.o
+    0x0800fefc   0x00000026   Code   RO         7062    i.lv_img_decoder_read_line  lv_img_decoder.o
+    0x0800ff22   0x0000053e   Code   RO        13253    i.lv_img_design     lv_img.o
+    0x08010460   0x000001ae   Code   RO         6225    i.lv_img_draw_core  lv_draw_img.o
+    0x0801060e   0x00000002   PAD
+    0x08010610   0x00000034   Code   RO        13256    i.lv_img_get_auto_size  lv_img.o
+    0x08010644   0x000001a0   Code   RO        13269    i.lv_img_set_src    lv_img.o
+    0x080107e4   0x00000270   Code   RO        13271    i.lv_img_signal     lv_img.o
+    0x08010a54   0x00000022   Code   RO         6226    i.lv_img_src_get_type  lv_draw_img.o
+    0x08010a76   0x00000028   Code   RO         8091    i.lv_indev_drv_init  lv_hal_indev.o
+    0x08010a9e   0x00000002   PAD
+    0x08010aa0   0x00000084   Code   RO         8092    i.lv_indev_drv_register  lv_hal_indev.o
+    0x08010b24   0x0000000c   Code   RO         4043    i.lv_indev_get_act  lv_indev.o
+    0x08010b30   0x00000014   Code   RO         8094    i.lv_indev_get_next  lv_hal_indev.o
+    0x08010b44   0x0000000c   Code   RO         4046    i.lv_indev_get_obj_act  lv_indev.o
+    0x08010b50   0x0000001c   Code   RO         4051    i.lv_indev_is_dragging  lv_indev.o
+    0x08010b6c   0x00000080   Code   RO         4052    i.lv_indev_reset    lv_indev.o
+    0x08010bec   0x00000072   Code   RO         4054    i.lv_indev_search_obj  lv_indev.o
+    0x08010c5e   0x0000000a   Code   RO         4055    i.lv_indev_set_button_points  lv_indev.o
+    0x08010c68   0x00000036   Code   RO         4056    i.lv_indev_set_cursor  lv_indev.o
+    0x08010c9e   0x00000002   PAD
+    0x08010ca0   0x00000090   Code   RO         4263    i.lv_init           lv_obj.o
+    0x08010d30   0x000001b8   Code   RO        13780    i.lv_label_create   lv_label.o
+    0x08010ee8   0x00000210   Code   RO        13782    i.lv_label_design   lv_label.o
+    0x080110f8   0x0000001e   Code   RO        13783    i.lv_label_dot_tmp_free  lv_label.o
+    0x08011116   0x00000002   PAD
+    0x08011118   0x0000003c   Code   RO        13784    i.lv_label_get_align  lv_label.o
+    0x08011154   0x00000240   Code   RO        13786    i.lv_label_get_letter_on  lv_label.o
+    0x08011394   0x00000034   Code   RO        13788    i.lv_label_get_long_mode  lv_label.o
+    0x080113c8   0x00000034   Code   RO        13789    i.lv_label_get_recolor  lv_label.o
+    0x080113fc   0x0000000a   Code   RO        13790    i.lv_label_get_style  lv_label.o
+    0x08011406   0x00000002   PAD
+    0x08011408   0x00000030   Code   RO        13791    i.lv_label_get_text  lv_label.o
+    0x08011438   0x00000020   Code   RO        13792    i.lv_label_get_text_sel_end  lv_label.o
+    0x08011458   0x00000020   Code   RO        13793    i.lv_label_get_text_sel_start  lv_label.o
+    0x08011478   0x00000488   Code   RO        13796    i.lv_label_refr_text  lv_label.o
+    0x08011900   0x0000006c   Code   RO        13797    i.lv_label_revert_dots  lv_label.o
+    0x0801196c   0x0000004c   Code   RO        13798    i.lv_label_set_align  lv_label.o
+    0x080119b8   0x0000004c   Code   RO        13800    i.lv_label_set_dot_tmp  lv_label.o
+    0x08011a04   0x000000b0   Code   RO        13801    i.lv_label_set_long_mode  lv_label.o
+    0x08011ab4   0x00000016   Code   RO        13802    i.lv_label_set_offset_x  lv_label.o
+    0x08011aca   0x00000016   Code   RO        13803    i.lv_label_set_offset_y  lv_label.o
+    0x08011ae0   0x0000004c   Code   RO        13804    i.lv_label_set_recolor  lv_label.o
+    0x08011b2c   0x000000e8   Code   RO        13805    i.lv_label_set_text  lv_label.o
+    0x08011c14   0x0000005c   Code   RO        13809    i.lv_label_set_text_static  lv_label.o
+    0x08011c70   0x000000bc   Code   RO        13810    i.lv_label_signal   lv_label.o
+    0x08011d2c   0x00000060   Code   RO         8861    i.lv_mem_alloc      lv_mem.o
+    0x08011d8c   0x00000046   Code   RO         8862    i.lv_mem_defrag     lv_mem.o
+    0x08011dd2   0x00000002   PAD
+    0x08011dd4   0x0000005c   Code   RO         8863    i.lv_mem_free       lv_mem.o
+    0x08011e30   0x00000064   Code   RO         8865    i.lv_mem_realloc    lv_mem.o
+    0x08011e94   0x00000034   Code   RO         4264    i.lv_obj_add_protect  lv_obj.o
+    0x08011ec8   0x00000040   Code   RO         4265    i.lv_obj_add_state  lv_obj.o
+    0x08011f08   0x00000080   Code   RO         4267    i.lv_obj_align      lv_obj.o
+    0x08011f88   0x00000080   Code   RO         4268    i.lv_obj_align_mid  lv_obj.o
+    0x08012008   0x00000038   Code   RO         4273    i.lv_obj_allocate_ext_attr  lv_obj.o
+    0x08012040   0x000000b8   Code   RO         4274    i.lv_obj_area_is_visible  lv_obj.o
+    0x080120f8   0x00000024   Code   RO         4276    i.lv_obj_clean_style_list  lv_obj.o
+    0x0801211c   0x00000034   Code   RO         4277    i.lv_obj_clear_protect  lv_obj.o
+    0x08012150   0x00000040   Code   RO         4278    i.lv_obj_clear_state  lv_obj.o
+    0x08012190   0x00000390   Code   RO         4281    i.lv_obj_create     lv_obj.o
+    0x08012520   0x0000006c   Code   RO         4282    i.lv_obj_del        lv_obj.o
+    0x0801258c   0x00000234   Code   RO         4286    i.lv_obj_design     lv_obj.o
+    0x080127c0   0x00000030   Code   RO         4291    i.lv_obj_get_auto_realign  lv_obj.o
+    0x080127f0   0x00000020   Code   RO         4292    i.lv_obj_get_base_dir  lv_obj.o
+    0x08012810   0x00000040   Code   RO         4293    i.lv_obj_get_child  lv_obj.o
+    0x08012850   0x00000030   Code   RO         4295    i.lv_obj_get_click  lv_obj.o
+    0x08012880   0x0000002c   Code   RO         4296    i.lv_obj_get_coords  lv_obj.o
+    0x080128ac   0x0000002c   Code   RO         4297    i.lv_obj_get_design_cb  lv_obj.o
+    0x080128d8   0x00000070   Code   RO         4298    i.lv_obj_get_disp   lv_obj.o
+    0x08012948   0x00000030   Code   RO         4299    i.lv_obj_get_drag   lv_obj.o
+    0x08012978   0x00000030   Code   RO         4300    i.lv_obj_get_drag_dir  lv_obj.o
+    0x080129a8   0x0000000a   Code   RO         4301    i.lv_obj_get_drag_parent  lv_obj.o
+    0x080129b2   0x00000002   PAD
+    0x080129b4   0x00000030   Code   RO         4302    i.lv_obj_get_drag_throw  lv_obj.o
+    0x080129e4   0x000001e4   Code   RO         4303    i.lv_obj_get_draw_rect_ext_pad_size  lv_obj.o
+    0x08012bc8   0x0000002c   Code   RO         4305    i.lv_obj_get_ext_attr  lv_obj.o
+    0x08012bf4   0x0000001e   Code   RO         4312    i.lv_obj_get_focused_obj  lv_obj.o
+    0x08012c12   0x0000000a   Code   RO         4313    i.lv_obj_get_gesture_parent  lv_obj.o
+    0x08012c1c   0x00000020   Code   RO         4314    i.lv_obj_get_group  lv_obj.o
+    0x08012c3c   0x00000028   Code   RO         4315    i.lv_obj_get_height  lv_obj.o
+    0x08012c64   0x00000024   Code   RO         4319    i.lv_obj_get_hidden  lv_obj.o
+    0x08012c88   0x0000002c   Code   RO         4322    i.lv_obj_get_parent  lv_obj.o
+    0x08012cb4   0x0000002c   Code   RO         4325    i.lv_obj_get_screen  lv_obj.o
+    0x08012ce0   0x0000002c   Code   RO         4326    i.lv_obj_get_signal_cb  lv_obj.o
+    0x08012d0c   0x00000050   Code   RO         4327    i.lv_obj_get_state  lv_obj.o
+    0x08012d5c   0x0000000c   Code   RO         4328    i.lv_obj_get_style_bg_blend_mode  lv_obj.o
+    0x08012d68   0x00000006   Code   RO         4329    i.lv_obj_get_style_bg_opa  lv_obj.o
+    0x08012d6e   0x0000000c   Code   RO         4330    i.lv_obj_get_style_border_blend_mode  lv_obj.o
+    0x08012d7a   0x00000010   Code   RO         4331    i.lv_obj_get_style_border_post  lv_obj.o
+    0x08012d8a   0x00000010   Code   RO        13272    i.lv_obj_get_style_border_post  lv_img.o
+    0x08012d9a   0x0000000c   Code   RO         4332    i.lv_obj_get_style_border_side  lv_obj.o
+    0x08012da6   0x00000006   Code   RO         4333    i.lv_obj_get_style_border_width  lv_obj.o
+    0x08012dac   0x00000010   Code   RO         4334    i.lv_obj_get_style_clip_corner  lv_obj.o
+    0x08012dbc   0x00000010   Code   RO        13273    i.lv_obj_get_style_clip_corner  lv_img.o
+    0x08012dcc   0x0000000e   Code   RO         4335    i.lv_obj_get_style_image_blend_mode  lv_obj.o
+    0x08012dda   0x00000008   Code   RO         4336    i.lv_obj_get_style_image_recolor_opa  lv_obj.o
+    0x08012de2   0x0000000c   Code   RO         4337    i.lv_obj_get_style_line_blend_mode  lv_obj.o
+    0x08012dee   0x00000024   Code   RO         4338    i.lv_obj_get_style_list  lv_obj.o
+    0x08012e12   0x00000006   Code   RO         4339    i.lv_obj_get_style_margin_bottom  lv_obj.o
+    0x08012e18   0x00000006   Code   RO        12349    i.lv_obj_get_style_margin_bottom  lv_cont.o
+    0x08012e1e   0x00000006   Code   RO         4340    i.lv_obj_get_style_margin_left  lv_obj.o
+    0x08012e24   0x00000006   Code   RO        12350    i.lv_obj_get_style_margin_left  lv_cont.o
+    0x08012e2a   0x00000006   Code   RO         4341    i.lv_obj_get_style_margin_right  lv_obj.o
+    0x08012e30   0x00000006   Code   RO        12351    i.lv_obj_get_style_margin_right  lv_cont.o
+    0x08012e36   0x00000006   Code   RO         4342    i.lv_obj_get_style_margin_top  lv_obj.o
+    0x08012e3c   0x00000006   Code   RO        12352    i.lv_obj_get_style_margin_top  lv_cont.o
+    0x08012e42   0x00000008   Code   RO         4343    i.lv_obj_get_style_opa_scale  lv_obj.o
+    0x08012e4a   0x0000000c   Code   RO         4344    i.lv_obj_get_style_outline_blend_mode  lv_obj.o
+    0x08012e56   0x00000006   Code   RO         4345    i.lv_obj_get_style_outline_opa  lv_obj.o
+    0x08012e5c   0x00000006   Code   RO         4346    i.lv_obj_get_style_outline_pad  lv_obj.o
+    0x08012e62   0x00000006   Code   RO         4347    i.lv_obj_get_style_outline_width  lv_obj.o
+    0x08012e68   0x00000006   Code   RO         4348    i.lv_obj_get_style_pad_bottom  lv_obj.o
+    0x08012e6e   0x00000006   Code   RO        12353    i.lv_obj_get_style_pad_bottom  lv_cont.o
+    0x08012e74   0x00000006   Code   RO        13274    i.lv_obj_get_style_pad_bottom  lv_img.o
+    0x08012e7a   0x00000006   Code   RO        13811    i.lv_obj_get_style_pad_bottom  lv_label.o
+    0x08012e80   0x00000006   Code   RO         4349    i.lv_obj_get_style_pad_inner  lv_obj.o
+    0x08012e86   0x00000006   Code   RO        12354    i.lv_obj_get_style_pad_inner  lv_cont.o
+    0x08012e8c   0x00000006   Code   RO         4350    i.lv_obj_get_style_pad_left  lv_obj.o
+    0x08012e92   0x00000006   Code   RO        12355    i.lv_obj_get_style_pad_left  lv_cont.o
+    0x08012e98   0x00000006   Code   RO        13275    i.lv_obj_get_style_pad_left  lv_img.o
+    0x08012e9e   0x00000006   Code   RO        13812    i.lv_obj_get_style_pad_left  lv_label.o
+    0x08012ea4   0x00000006   Code   RO         4351    i.lv_obj_get_style_pad_right  lv_obj.o
+    0x08012eaa   0x00000006   Code   RO        12356    i.lv_obj_get_style_pad_right  lv_cont.o
+    0x08012eb0   0x00000006   Code   RO        13276    i.lv_obj_get_style_pad_right  lv_img.o
+    0x08012eb6   0x00000006   Code   RO        13813    i.lv_obj_get_style_pad_right  lv_label.o
+    0x08012ebc   0x00000006   Code   RO         4352    i.lv_obj_get_style_pad_top  lv_obj.o
+    0x08012ec2   0x00000006   Code   RO        12357    i.lv_obj_get_style_pad_top  lv_cont.o
+    0x08012ec8   0x00000006   Code   RO        13277    i.lv_obj_get_style_pad_top  lv_img.o
+    0x08012ece   0x00000006   Code   RO        13814    i.lv_obj_get_style_pad_top  lv_label.o
+    0x08012ed4   0x0000000c   Code   RO         4353    i.lv_obj_get_style_pattern_blend_mode  lv_obj.o
+    0x08012ee0   0x00000006   Code   RO         4354    i.lv_obj_get_style_pattern_image  lv_obj.o
+    0x08012ee6   0x00000010   Code   RO         4355    i.lv_obj_get_style_pattern_recolor  lv_obj.o
+    0x08012ef6   0x00000006   Code   RO         4356    i.lv_obj_get_style_radius  lv_obj.o
+    0x08012efc   0x0000000c   Code   RO         4357    i.lv_obj_get_style_shadow_blend_mode  lv_obj.o
+    0x08012f08   0x00000006   Code   RO         4358    i.lv_obj_get_style_shadow_ofs_x  lv_obj.o
+    0x08012f0e   0x00000006   Code   RO         4359    i.lv_obj_get_style_shadow_ofs_y  lv_obj.o
+    0x08012f14   0x00000006   Code   RO         4360    i.lv_obj_get_style_shadow_opa  lv_obj.o
+    0x08012f1a   0x00000006   Code   RO         4361    i.lv_obj_get_style_shadow_spread  lv_obj.o
+    0x08012f20   0x00000006   Code   RO         4362    i.lv_obj_get_style_shadow_width  lv_obj.o
+    0x08012f26   0x0000000e   Code   RO         4363    i.lv_obj_get_style_text_blend_mode  lv_obj.o
+    0x08012f34   0x0000000e   Code   RO         4364    i.lv_obj_get_style_text_decor  lv_obj.o
+    0x08012f42   0x00000008   Code   RO         4365    i.lv_obj_get_style_text_font  lv_obj.o
+    0x08012f4a   0x00000008   Code   RO        13815    i.lv_obj_get_style_text_font  lv_label.o
+    0x08012f52   0x00000008   Code   RO         4366    i.lv_obj_get_style_text_letter_space  lv_obj.o
+    0x08012f5a   0x00000008   Code   RO        13816    i.lv_obj_get_style_text_letter_space  lv_label.o
+    0x08012f62   0x00000008   Code   RO         4367    i.lv_obj_get_style_text_line_space  lv_obj.o
+    0x08012f6a   0x00000008   Code   RO        13817    i.lv_obj_get_style_text_line_space  lv_label.o
+    0x08012f72   0x00000006   Code   RO         4368    i.lv_obj_get_style_transform_angle  lv_obj.o
+    0x08012f78   0x00000006   Code   RO        13278    i.lv_obj_get_style_transform_angle  lv_img.o
+    0x08012f7e   0x00000006   Code   RO         4369    i.lv_obj_get_style_transform_height  lv_obj.o
+    0x08012f84   0x00000006   Code   RO         4370    i.lv_obj_get_style_transform_width  lv_obj.o
+    0x08012f8a   0x00000006   Code   RO         4371    i.lv_obj_get_style_transform_zoom  lv_obj.o
+    0x08012f90   0x00000006   Code   RO        13279    i.lv_obj_get_style_transform_zoom  lv_img.o
+    0x08012f96   0x0000000c   Code   RO         4372    i.lv_obj_get_style_value_align  lv_obj.o
+    0x08012fa2   0x0000000c   Code   RO         4373    i.lv_obj_get_style_value_blend_mode  lv_obj.o
+    0x08012fae   0x00000006   Code   RO         4374    i.lv_obj_get_style_value_font  lv_obj.o
+    0x08012fb4   0x00000006   Code   RO         4375    i.lv_obj_get_style_value_letter_space  lv_obj.o
+    0x08012fba   0x00000006   Code   RO         4376    i.lv_obj_get_style_value_ofs_x  lv_obj.o
+    0x08012fc0   0x00000006   Code   RO         4377    i.lv_obj_get_style_value_ofs_y  lv_obj.o
+    0x08012fc6   0x00000006   Code   RO         4378    i.lv_obj_get_style_value_opa  lv_obj.o
+    0x08012fcc   0x00000006   Code   RO         4379    i.lv_obj_get_style_value_str  lv_obj.o
+    0x08012fd2   0x00000002   PAD
+    0x08012fd4   0x00000028   Code   RO         4382    i.lv_obj_get_width  lv_obj.o
+    0x08012ffc   0x00000048   Code   RO         4383    i.lv_obj_get_width_fit  lv_obj.o
+    0x08013044   0x00000040   Code   RO         4386    i.lv_obj_get_x      lv_obj.o
+    0x08013084   0x00000040   Code   RO         4387    i.lv_obj_get_y      lv_obj.o
+    0x080130c4   0x0000001a   Code   RO         4388    i.lv_obj_handle_get_type_signal  lv_obj.o
+    0x080130de   0x00000028   Code   RO         4389    i.lv_obj_hittest    lv_obj.o
+    0x08013106   0x00000090   Code   RO         4390    i.lv_obj_init_draw_img_dsc  lv_obj.o
+    0x08013196   0x000000c6   Code   RO         4391    i.lv_obj_init_draw_label_dsc  lv_obj.o
+    0x0801325c   0x000000a2   Code   RO         4392    i.lv_obj_init_draw_line_dsc  lv_obj.o
+    0x080132fe   0x00000304   Code   RO         4393    i.lv_obj_init_draw_rect_dsc  lv_obj.o
+    0x08013602   0x00000002   PAD
+    0x08013604   0x00000064   Code   RO         4394    i.lv_obj_invalidate  lv_obj.o
+    0x08013668   0x0000004c   Code   RO         4395    i.lv_obj_invalidate_area  lv_obj.o
+    0x080136b4   0x0000003c   Code   RO         4396    i.lv_obj_is_focused  lv_obj.o
+    0x080136f0   0x0000003c   Code   RO         4397    i.lv_obj_is_point_on_coords  lv_obj.o
+    0x0801372c   0x00000034   Code   RO         4398    i.lv_obj_is_protected  lv_obj.o
+    0x08013760   0x00000060   Code   RO         4401    i.lv_obj_move_foreground  lv_obj.o
+    0x080137c0   0x0000004c   Code   RO         4402    i.lv_obj_realign    lv_obj.o
+    0x0801380c   0x00000038   Code   RO         4403    i.lv_obj_refresh_ext_draw_pad  lv_obj.o
+    0x08013844   0x00000130   Code   RO         4404    i.lv_obj_refresh_style  lv_obj.o
+    0x08013974   0x0000003a   Code   RO         4407    i.lv_obj_report_style_mod  lv_obj.o
+    0x080139ae   0x00000018   Code   RO         4408    i.lv_obj_reset_style_list  lv_obj.o
+    0x080139c6   0x00000002   PAD
+    0x080139c8   0x00000034   Code   RO         4409    i.lv_obj_set_adv_hittest  lv_obj.o
+    0x080139fc   0x00000028   Code   RO         4412    i.lv_obj_set_click  lv_obj.o
+    0x08013a24   0x0000002c   Code   RO         4413    i.lv_obj_set_design_cb  lv_obj.o
+    0x08013a50   0x0000003c   Code   RO         4422    i.lv_obj_set_height  lv_obj.o
+    0x08013a8c   0x000000d8   Code   RO         4426    i.lv_obj_set_parent  lv_obj.o
+    0x08013b64   0x000000ac   Code   RO         4428    i.lv_obj_set_pos    lv_obj.o
+    0x08013c10   0x0000002c   Code   RO         4429    i.lv_obj_set_signal_cb  lv_obj.o
+    0x08013c3c   0x000000bc   Code   RO         4430    i.lv_obj_set_size   lv_obj.o
+    0x08013cf8   0x0000020c   Code   RO         4431    i.lv_obj_set_state  lv_obj.o
+    0x08013f04   0x0000003c   Code   RO         4436    i.lv_obj_set_x      lv_obj.o
+    0x08013f40   0x0000003c   Code   RO         4437    i.lv_obj_set_y      lv_obj.o
+    0x08013f7c   0x000000e0   Code   RO         4438    i.lv_obj_signal     lv_obj.o
+    0x0801405c   0x0000003a   Code   RO         8439    i.lv_point_within_circle  lv_area.o
+    0x08014096   0x00000002   PAD
+    0x08014098   0x00000048   Code   RO        16723    i.lv_port_disp_init  lv_port_disp.o
+    0x080140e0   0x00000070   Code   RO        16967    i.lv_port_indev_init  lv_port_indev.o
+    0x08014150   0x00000154   Code   RO         5549    i.lv_refr_area      lv_refr.o
+    0x080142a4   0x00000114   Code   RO         5550    i.lv_refr_area_part  lv_refr.o
+    0x080143b8   0x0000009c   Code   RO         5551    i.lv_refr_areas     lv_refr.o
+    0x08014454   0x00000074   Code   RO         5552    i.lv_refr_get_top_obj  lv_refr.o
+    0x080144c8   0x000000c8   Code   RO         5553    i.lv_refr_join_area  lv_refr.o
+    0x08014590   0x000000da   Code   RO         5555    i.lv_refr_obj       lv_refr.o
+    0x0801466a   0x00000002   PAD
+    0x0801466c   0x00000050   Code   RO         5556    i.lv_refr_obj_and_children  lv_refr.o
+    0x080146bc   0x0000008c   Code   RO         5557    i.lv_refr_vdb_flush  lv_refr.o
+    0x08014748   0x00000214   Code   RO         5558    i.lv_refr_vdb_rotate  lv_refr.o
+    0x0801495c   0x0000006a   Code   RO         5559    i.lv_refr_vdb_rotate_180  lv_refr.o
+    0x080149c6   0x00000080   Code   RO         5560    i.lv_refr_vdb_rotate_90_sqr  lv_refr.o
+    0x08014a46   0x00000016   Code   RO         4439    i.lv_signal_send    lv_obj.o
+    0x08014a5c   0x00000028   Code   RO         5720    i.lv_style_copy     lv_style.o
+    0x08014a84   0x00000006   Code   RO         5721    i.lv_style_init     lv_style.o
+    0x08014a8a   0x000000e0   Code   RO         5722    i.lv_style_list_copy  lv_style.o
+    0x08014b6a   0x00000018   Code   RO         5723    i.lv_style_list_get_local_style  lv_style.o
+    0x08014b82   0x00000026   Code   RO         5724    i.lv_style_list_get_style  lv_style.o
+    0x08014ba8   0x00000006   Code   RO         5725    i.lv_style_list_init  lv_style.o
+    0x08014bae   0x00000056   Code   RO         5726    i.lv_style_remove_prop  lv_style.o
+    0x08014c04   0x00000014   Code   RO         5727    i.lv_style_reset    lv_style.o
+    0x08014c18   0x0000000a   Code   RO         9735    i.lv_style_set_bg_color  lv_theme_material.o
+    0x08014c22   0x0000000a   Code   RO         9736    i.lv_style_set_bg_opa  lv_theme_material.o
+    0x08014c2c   0x0000000a   Code   RO         9737    i.lv_style_set_border_color  lv_theme_material.o
+    0x08014c36   0x0000000a   Code   RO         9738    i.lv_style_set_border_opa  lv_theme_material.o
+    0x08014c40   0x0000000a   Code   RO         9739    i.lv_style_set_border_side  lv_theme_material.o
+    0x08014c4a   0x0000000a   Code   RO         9740    i.lv_style_set_border_width  lv_theme_material.o
+    0x08014c54   0x0000000a   Code   RO         9741    i.lv_style_set_clip_corner  lv_theme_material.o
+    0x08014c5e   0x0000000c   Code   RO         9742    i.lv_style_set_image_recolor  lv_theme_material.o
+    0x08014c6a   0x0000000a   Code   RO         9743    i.lv_style_set_line_color  lv_theme_material.o
+    0x08014c74   0x0000000a   Code   RO         9744    i.lv_style_set_line_rounded  lv_theme_material.o
+    0x08014c7e   0x0000000a   Code   RO         9745    i.lv_style_set_line_width  lv_theme_material.o
+    0x08014c88   0x0000000a   Code   RO         9746    i.lv_style_set_margin_bottom  lv_theme_material.o
+    0x08014c92   0x0000000a   Code   RO         9747    i.lv_style_set_margin_top  lv_theme_material.o
+    0x08014c9c   0x0000000a   Code   RO         9748    i.lv_style_set_outline_color  lv_theme_material.o
+    0x08014ca6   0x0000000a   Code   RO         9749    i.lv_style_set_outline_opa  lv_theme_material.o
+    0x08014cb0   0x0000000a   Code   RO         9750    i.lv_style_set_outline_pad  lv_theme_material.o
+    0x08014cba   0x0000000a   Code   RO         9751    i.lv_style_set_outline_width  lv_theme_material.o
+    0x08014cc4   0x0000000a   Code   RO         9752    i.lv_style_set_pad_bottom  lv_theme_material.o
+    0x08014cce   0x0000000a   Code   RO         9753    i.lv_style_set_pad_inner  lv_theme_material.o
+    0x08014cd8   0x0000000a   Code   RO         9754    i.lv_style_set_pad_left  lv_theme_material.o
+    0x08014ce2   0x0000000a   Code   RO         9755    i.lv_style_set_pad_right  lv_theme_material.o
+    0x08014cec   0x0000000a   Code   RO         9756    i.lv_style_set_pad_top  lv_theme_material.o
+    0x08014cf6   0x0000000a   Code   RO         9757    i.lv_style_set_pattern_opa  lv_theme_material.o
+    0x08014d00   0x0000000a   Code   RO         9758    i.lv_style_set_radius  lv_theme_material.o
+    0x08014d0a   0x0000000a   Code   RO         9759    i.lv_style_set_scale_end_color  lv_theme_material.o
+    0x08014d14   0x0000000a   Code   RO         9760    i.lv_style_set_scale_end_line_width  lv_theme_material.o
+    0x08014d1e   0x0000000a   Code   RO         9761    i.lv_style_set_scale_grad_color  lv_theme_material.o
+    0x08014d28   0x0000000a   Code   RO         9762    i.lv_style_set_scale_width  lv_theme_material.o
+    0x08014d32   0x0000000a   Code   RO         9763    i.lv_style_set_shadow_color  lv_theme_material.o
+    0x08014d3c   0x0000000a   Code   RO         9764    i.lv_style_set_shadow_width  lv_theme_material.o
+    0x08014d46   0x0000000a   Code   RO         9765    i.lv_style_set_size  lv_theme_material.o
+    0x08014d50   0x0000000c   Code   RO         9766    i.lv_style_set_text_color  lv_theme_material.o
+    0x08014d5c   0x0000000c   Code   RO         9767    i.lv_style_set_text_line_space  lv_theme_material.o
+    0x08014d68   0x0000000a   Code   RO         9768    i.lv_style_set_transform_width  lv_theme_material.o
+    0x08014d72   0x0000000a   Code   RO         9769    i.lv_style_set_transition_delay  lv_theme_material.o
+    0x08014d7c   0x0000000a   Code   RO         9770    i.lv_style_set_transition_prop_5  lv_theme_material.o
+    0x08014d86   0x0000000a   Code   RO         9771    i.lv_style_set_transition_prop_6  lv_theme_material.o
+    0x08014d90   0x0000000a   Code   RO         9772    i.lv_style_set_transition_time  lv_theme_material.o
+    0x08014d9a   0x0000000a   Code   RO         9773    i.lv_style_set_value_color  lv_theme_material.o
+    0x08014da4   0x0000000a   Code   RO         9774    i.lv_style_set_value_font  lv_theme_material.o
+    0x08014dae   0x00000002   PAD
+    0x08014db0   0x000000c8   Code   RO         9026    i.lv_task_create    lv_task.o
+    0x08014e78   0x00000030   Code   RO         9028    i.lv_task_del       lv_task.o
+    0x08014ea8   0x0000003c   Code   RO         9030    i.lv_task_exec      lv_task.o
+    0x08014ee4   0x00000114   Code   RO         9033    i.lv_task_handler   lv_task.o
+    0x08014ff8   0x00000012   Code   RO         9034    i.lv_task_ready     lv_task.o
+    0x0801500a   0x00000002   PAD
+    0x0801500c   0x0000005c   Code   RO         9038    i.lv_task_set_prio  lv_task.o
+    0x08015068   0x00000018   Code   RO         9040    i.lv_task_time_remaining  lv_task.o
+    0x08015080   0x00000020   Code   RO         9337    i.lv_theme_apply    lv_theme.o
+    0x080150a0   0x0000000c   Code   RO         9343    i.lv_theme_get_font_normal  lv_theme.o
+    0x080150ac   0x000000c4   Code   RO         9775    i.lv_theme_material_init  lv_theme_material.o
+    0x08015170   0x0000000c   Code   RO         9347    i.lv_theme_set_act  lv_theme.o
+    0x0801517c   0x0000000c   Code   RO         8214    i.lv_tick_elaps     lv_hal_tick.o
+    0x08015188   0x00000014   Code   RO         8215    i.lv_tick_get       lv_hal_tick.o
+    0x0801519c   0x00000014   Code   RO         8216    i.lv_tick_inc       lv_hal_tick.o
+    0x080151b0   0x00000130   Code   RO         9144    i.lv_txt_get_next_word  lv_txt.o
+    0x080152e0   0x00000038   Code   RO         9147    i.lv_txt_utf8_get_byte_id  lv_txt.o
+    0x08015318   0x00000028   Code   RO         9148    i.lv_txt_utf8_get_char_id  lv_txt.o
+    0x08015340   0x00000028   Code   RO         9149    i.lv_txt_utf8_get_length  lv_txt.o
+    0x08015368   0x0000008a   Code   RO         9150    i.lv_txt_utf8_next  lv_txt.o
+    0x080153f2   0x00000002   PAD
+    0x080153f4   0x00000048   Code   RO         9151    i.lv_txt_utf8_prev  lv_txt.o
+    0x0801543c   0x00000032   Code   RO         9152    i.lv_txt_utf8_size  lv_txt.o
+    0x0801546e   0x00000014   Code   RO         5561    i.lv_vdb_rotate4    lv_refr.o
+    0x08015482   0x00000002   PAD
+    0x08015484   0x00000098   Code   RO           13    i.main              main.o
+    0x0801551c   0x00000160   Code   RO         6057    i.map_blended       lv_draw_blend.o
+    0x0801567c   0x0000033c   Code   RO         6058    i.map_normal        lv_draw_blend.o
+    0x080159b8   0x00000110   Code   RO         6059    i.map_set_px        lv_draw_blend.o
+    0x08015ac8   0x0000001c   Code   RO         6593    i.mask_mix          lv_draw_mask.o
+    0x08015ae4   0x00000028   Code   RO        16968    i.mouse_read        lv_port_indev.o
+    0x08015b0c   0x00000080   Code   RO         9776    i.msgbox_init       lv_theme_material.o
+    0x08015b8c   0x0000000c   Code   RO         8710    i.node_set_next     lv_ll.o
+    0x08015b98   0x0000000a   Code   RO         8711    i.node_set_prev     lv_ll.o
+    0x08015ba2   0x00000070   Code   RO         4440    i.obj_align_core    lv_obj.o
+    0x08015c12   0x00000136   Code   RO         4441    i.obj_align_mid_core  lv_obj.o
+    0x08015d48   0x000000dc   Code   RO         4442    i.obj_del_core      lv_obj.o
+    0x08015e24   0x0000002a   Code   RO         3800    i.obj_to_foreground  lv_group.o
+    0x08015e4e   0x00000002   PAD
+    0x08015e50   0x00000118   Code   RO         9777    i.page_init         lv_theme_material.o
+    0x08015f68   0x00000044   Code   RO         4445    i.refresh_children_position  lv_obj.o
+    0x08015fac   0x00000030   Code   RO         4446    i.refresh_children_style  lv_obj.o
+    0x08015fdc   0x00000086   Code   RO         4447    i.report_style_mod_core  lv_obj.o
+    0x08016062   0x00000002   PAD
+    0x08016064   0x000000a4   Code   RO         7528    i.rle_next          lv_font_fmt_txt.o
+    0x08016108   0x00000088   Code   RO         9778    i.roller_init       lv_theme_material.o
+    0x08016190   0x00000138   Code   RO         6736    i.shadow_blur_corner  lv_draw_rect.o
+    0x080162c8   0x0000017e   Code   RO         6737    i.shadow_draw_corner_buf  lv_draw_rect.o
+    0x08016446   0x00000002   PAD
+    0x08016448   0x00000048   Code   RO         6227    i.show_error        lv_draw_img.o
+    0x08016490   0x0000021c   Code   RO         9779    i.slider_init       lv_theme_material.o
+    0x080166ac   0x000000c4   Code   RO         9780    i.spinbox_init      lv_theme_material.o
+    0x08016770   0x000000c2   Code   RO         4448    i.style_prop_is_cacheble  lv_obj.o
+    0x08016832   0x00000018   Code   RO         5728    i.style_resize      lv_style.o
+    0x0801684a   0x000001b4   Code   RO         4449    i.style_snapshot    lv_obj.o
+    0x080169fe   0x00000108   Code   RO         4450    i.style_snapshot_compare  lv_obj.o
+    0x08016b06   0x00000002   PAD
+    0x08016b08   0x00000100   Code   RO         9781    i.switch_init       lv_theme_material.o
+    0x08016c08   0x000001d4   Code   RO         9782    i.table_init        lv_theme_material.o
+    0x08016ddc   0x0000043e   Code   RO         9783    i.tabview_win_shared_init  lv_theme_material.o
+    0x0801721a   0x00000002   PAD
+    0x0801721c   0x000000dc   Code   RO         9784    i.textarea_init     lv_theme_material.o
+    0x080172f8   0x00000590   Code   RO         9785    i.theme_apply       lv_theme_material.o
+    0x08017888   0x00000132   Code   RO         4451    i.trans_anim_cb     lv_obj.o
+    0x080179ba   0x00000002   PAD
+    0x080179bc   0x00000060   Code   RO         4452    i.trans_anim_ready_cb  lv_obj.o
+    0x08017a1c   0x00000058   Code   RO         4453    i.trans_anim_start_cb  lv_obj.o
+    0x08017a74   0x000002ac   Code   RO         4454    i.trans_create      lv_obj.o
+    0x08017d20   0x00000074   Code   RO         4455    i.trans_del         lv_obj.o
+    0x08017d94   0x00000008   Code   RO         7529    i.unicode_list_compare  lv_font_fmt_txt.o
+    0x08017d9c   0x0000030c   Code   RO         4456    i.update_style_cache  lv_obj.o
+    0x080180a8   0x000000e0   Code   RO         4457    i.update_style_cache_children  lv_obj.o
+    0x08018188   0x00000010   Data   RO         3391    .constdata          system_stm32f1xx.o
+    0x08018198   0x00000008   Data   RO         3392    .constdata          system_stm32f1xx.o
+    0x080181a0   0x00000073   Data   RO         3462    .constdata          st7735.o
+    0x08018213   0x00000001   PAD
+    0x08018214   0x00000002   Data   RO         4458    .constdata          lv_obj.o
+    0x08018216   0x00000002   PAD
+    0x08018218   0x0000000a   Data   RO         6228    .constdata          lv_draw_img.o
+    0x08018222   0x00000002   PAD
+    0x08018224   0x0000011a   Data   RO         6367    .constdata          lv_draw_label.o
+    0x0801833e   0x00000021   Data   RO         6476    .constdata          lv_draw_line.o
+    0x0801835f   0x00000001   PAD
+    0x08018360   0x00000002   Data   RO         6738    .constdata          lv_draw_rect.o
+    0x08018362   0x0000219a   Data   RO         7666    .constdata          lv_font_montserrat_14.o
+    0x0801a4fc   0x000004d8   Data   RO         7667    .constdata          lv_font_montserrat_14.o
+    0x0801a9d4   0x00000076   Data   RO         7668    .constdata          lv_font_montserrat_14.o
+    0x0801aa4a   0x00000002   PAD
+    0x0801aa4c   0x00000028   Data   RO         7669    .constdata          lv_font_montserrat_14.o
+    0x0801aa74   0x0000009b   Data   RO         7670    .constdata          lv_font_montserrat_14.o
+    0x0801ab0f   0x0000009b   Data   RO         7671    .constdata          lv_font_montserrat_14.o
+    0x0801abaa   0x00000bad   Data   RO         7672    .constdata          lv_font_montserrat_14.o
+    0x0801b757   0x00000001   PAD
+    0x0801b758   0x00000010   Data   RO         7673    .constdata          lv_font_montserrat_14.o
+    0x0801b768   0x00000006   Data   RO         7848    .constdata          lv_hal_disp.o
+    0x0801b76e   0x00000002   PAD
+    0x0801b770   0x00000008   Data   RO         8268    .constdata          lv_anim.o
+    0x0801b778   0x00000002   Data   RO         8577    .constdata          lv_color.o
+    0x0801b77a   0x00000011   Data   RO         8629    .constdata          lv_debug.o
+    0x0801b78b   0x00000001   PAD
+    0x0801b78c   0x000000b6   Data   RO         8805    .constdata          lv_math.o
+    0x0801b842   0x00000002   PAD
+    0x0801b844   0x00000046   Data   RO         9787    .constdata          lv_theme_material.o
+    0x0801b88a   0x00000004   Data   RO        16969    .constdata          lv_port_indev.o
+    0x0801b88e   0x00000081   Data   RO        17063    .constdata          mc_w.l(ctype_o.o)
+    0x0801b90f   0x00000001   PAD
+    0x0801b910   0x00000004   Data   RO        17064    .constdata          mc_w.l(ctype_o.o)
+    0x0801b914   0x00000051   Data   RO         8870    .conststring        lv_mem.o
+    0x0801b965   0x00000003   PAD
+    0x0801b968   0x00000020   Data   RO        17094    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000130, Max: 0xffffffff, ABSOLUTE, COMPRESSED[0x00000058])
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x0000000c   Data   RW           15    .data               main.o
+    0x2000000c   0x0000000c   Data   RW         1145    .data               stm32f1xx_hal.o
+    0x20000018   0x00000004   Data   RW         3393    .data               system_stm32f1xx.o
+    0x2000001c   0x00000008   Data   RW         4059    .data               lv_indev.o
+    0x20000024   0x0000000c   Data   RW         4459    .data               lv_obj.o
+    0x20000030   0x00000008   Data   RW         5562    .data               lv_refr.o
+    0x20000038   0x00000008   Data   RW         6369    .data               lv_draw_label.o
+    0x20000040   0x00000002   Data   RW         6998    .data               lv_img_cache.o
+    0x20000042   0x00000002   PAD
+    0x20000044   0x0000000c   Data   RW         7530    .data               lv_font_fmt_txt.o
+    0x20000050   0x0000001c   Data   RW         7674    .data               lv_font_montserrat_14.o
+    0x2000006c   0x00000014   Data   RW         7675    .data               lv_font_montserrat_14.o
+    0x20000080   0x00000004   Data   RW         7849    .data               lv_hal_disp.o
+    0x20000084   0x00000008   Data   RW         8217    .data               lv_hal_tick.o
+    0x2000008c   0x0000000c   Data   RW         8269    .data               lv_anim.o
+    0x20000098   0x0000001c   Data   RW         8670    .data               lv_gc.o
+    0x200000b4   0x00000020   Data   RW         8871    .data               lv_mem.o
+    0x200000d4   0x00000010   Data   RW         9041    .data               lv_task.o
+    0x200000e4   0x0000000c   Data   RW         9153    .data               lv_txt.o
+    0x200000f0   0x00000004   Data   RW         9156    .data               lv_txt.o
+    0x200000f4   0x00000004   Data   RW         9157    .data               lv_txt.o
+    0x200000f8   0x00000004   Data   RW         9158    .data               lv_txt.o
+    0x200000fc   0x00000004   Data   RW         9350    .data               lv_theme.o
+    0x20000100   0x00000004   Data   RW         9788    .data               lv_theme_material.o
+    0x20000104   0x00000008   Data   RW        11149    .data               lv_btn.o
+    0x2000010c   0x0000000c   Data   RW        12358    .data               lv_cont.o
+    0x20000118   0x00000004   Data   RW        13280    .data               lv_img.o
+    0x2000011c   0x00000004   Data   RW        13818    .data               lv_label.o
+    0x20000120   0x0000000c   Data   RW        16970    .data               lv_port_indev.o
+    0x2000012c   0x00000004   Data   RW        17054    .data               mc_w.l(errno.o)
+
+
+    Execution Region ER_ZI (Base: 0x20000130, Size: 0x000058a8, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000130   0x00000028   Zero   RW           14    .bss                main.o
+    0x20000158   0x00000058   Zero   RW          509    .bss                spi.o
+    0x200001b0   0x00000048   Zero   RW          552    .bss                tim.o
+    0x200001f8   0x00000084   Zero   RW          600    .bss                usart.o
+    0x2000027c   0x00000100   Zero   RW         6366    .bss                lv_draw_label.o
+    0x2000037c   0x0000016c   Zero   RW         8669    .bss                lv_gc.o
+    0x200004e8   0x00004000   Zero   RW         8867    .bss                lv_mem.o
+    0x200044e8   0x00000010   Zero   RW         8868    .bss                lv_mem.o
+    0x200044f8   0x00000010   Zero   RW         8869    .bss                lv_mem.o
+    0x20004508   0x00000028   Zero   RW         9786    .bss                lv_theme_material.o
+    0x20004530   0x00000ca4   Zero   RW        16724    .bss                lv_port_disp.o
+    0x200051d4   0x00000004   PAD
+    0x200051d8   0x00000800   Zero   RW            1    STACK               startup_stm32f103xe.o
+

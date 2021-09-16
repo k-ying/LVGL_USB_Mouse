@@ -1,0 +1,52 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints"/>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
+ </FrameBufferWindow>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path="F103VE_HAL_LVGL4ST7735"/>
+  <ProjectSessionItem path="F103VE_HAL_LVGL4ST7735;F103VE_HAL_LVGL4ST7735"/>
+  <ProjectSessionItem path="F103VE_HAL_LVGL4ST7735;F103VE_HAL_LVGL4ST7735;Application/MDK-ARM"/>
+  <ProjectSessionItem path="F103VE_HAL_LVGL4ST7735;F103VE_HAL_LVGL4ST7735;Application/User"/>
+  <ProjectSessionItem path="F103VE_HAL_LVGL4ST7735;F103VE_HAL_LVGL4ST7735;GUI/lvgl_dvr"/>
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never"/>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="29" y="133" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Src/main.c" selected="1" top="112" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="55" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Drivers/ST7735/st7735.h" selected="0" top="45" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="47" y="114" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../GUI_lvgl/lvgl_driver/lv_port_indev.c" selected="0" top="83" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="229" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Src/stm32f1xx_it.c" selected="0" top="210" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="145" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Src/usart.c" selected="0" top="93" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="11" y="40" useTextEdit="1" openedFrom="D:/Project/emStudio/F103_ST7735/F103VE_HAL_LVGL4ST7735/GUI_lvgl/lvgl_driver/lv_port_indev.c" useBinaryEdit="0" left="0" path="../GUI_lvgl/lvgl/src/lv_font/lv_symbol_def.h" selected="0" top="55" codecName="UTF-8"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="24" y="103" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../Src/tim.c" selected="0" top="62" codecName="UTF-8"/>
+ </Files>
+ <ARMCrossStudioWindow activeProject="F103VE_HAL_LVGL4ST7735" fileDialogDefaultFilter="*.c;*.cpp;*.cxx;*.cc;*.h;*.hpp;*.hxx" autoConnectTarget="J-Link" buildConfiguration="F103VE_HAL_LVGL4ST7735 External" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
+</session>
