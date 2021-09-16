@@ -1,5 +1,5 @@
 # LVGL_USB_Mouse
-a simple tool using PC mouse to control MCU and LCD (with LVGL library)
+A simple tool using PC mouse to control MCU and LCD/OLED (with LVGL library), if your screen cannot be controlled by touch.
 
 > F103VE_HAL_LVGL4ST7735
 
