@@ -18,3 +18,5 @@ You can use Keil5 MDK and Segger Embedded Studio to open the project.
 ## Qt_lvgl_USB_Mouse
 The PC tools, through the serial port to send mouse coordinate data to control the LCD screen pointer, using Qt5 Quick development,which can Cross-platform compilation ,it's easy to use.
 > 配套使用的PC端小工具，通过串口发送鼠标坐标数据来控制LCD屏幕指针，使用Qt5 quick开发，可跨平台编译，简单易用。
+
+Thanks for Qt and [TaoQuick](https://github.com/jaredtao/taoquick) Component library.
