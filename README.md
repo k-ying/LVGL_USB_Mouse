@@ -1,6 +1,6 @@
 # LVGL_USB_Mouse
 A simple tool using PC mouse via USART to control MCU and LCD/OLED (with LVGL library), if your screen cannot be controlled by touch.
-> 如果您的屏幕无法通过触摸控制，使用 PC 鼠标串口控制 MCU 和 LCD/OLED（带有 LVGL 库）的简单工具。PS:因为懒得买带触摸的屏幕，又想简单学下LVGL所以做了这么个小工具。
+> 如果你的屏幕无法通过触摸控制，这是一个使用 PC 鼠标串口控制 MCU 和 LCD/OLED（带有 LVGL 库）的简单工具。~~PS:因为懒得买带触摸的屏幕，又想简单学下LVGL所以做了这么个小工具。~~
 
 ## F103VE_HAL_LVGL4ST7735
 
