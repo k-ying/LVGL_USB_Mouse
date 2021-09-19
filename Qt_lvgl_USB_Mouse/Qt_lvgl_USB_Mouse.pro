@@ -31,3 +31,5 @@ DISTFILES +=
 
 HEADERS += \
     serialport.h
+
+Release:QMAKE_POST_LINK += upx -9 $(DESTDIR_TARGET)

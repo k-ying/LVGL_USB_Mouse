@@ -40,7 +40,7 @@ Window {
     Text {
         id: tt_ver
         x: 159
-        text: qsTr("Version:1.0.0")
+        text: qsTr("Version:1.0.1")
         anchors.top: tt_name.bottom
         font.pixelSize: 14
         anchors.topMargin: 10

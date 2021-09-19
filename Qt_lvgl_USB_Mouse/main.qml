@@ -119,8 +119,24 @@ ApplicationWindow {
         serialport.initPort()
     }
     function setModel(s){
-        myModel.clear() //懒得写重复检查，直接claear再append搜到的port，不clear重复刷新时会同名叠加
-        myModel.append({s})
+        //console.log("count="+myModel.count)
+        if(myModel.count==0){
+            myModel.append({s})
+        }
+        else{
+            var diff=0
+            for(var i=0;i<myModel.count;i++)
+            {
+                if((myModel.get(i).s !== s))//重复检查
+                {
+                    diff++
+                }
+            }
+            if(diff == myModel.count){
+                myModel.append({s})
+            }
+        }
+        //myModel.clear() //懒得写重复检查只用clear，后果导致v1.0.0只能显示一个串口的bug
     }
 
     Label{
@@ -210,7 +226,11 @@ ApplicationWindow {
         font.pointSize: 14
         anchors.topMargin: 0
         anchors.rightMargin: 7
-        onClicked: serialport.initPort()
+        onClicked:
+        {
+            myModel.clear()
+            serialport.initPort()
+        }
         ToolTip.visible: hovered
         ToolTip.text: "Refresh(Ctrl+R)"
         ToolTip.delay: 200
